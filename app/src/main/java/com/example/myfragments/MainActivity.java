@@ -23,6 +23,18 @@ public class MainActivity extends AppCompatActivity {
         Button3 = findViewById(R.id.btn_3);
         myLayout = findViewById(R.id.linearLayout);
 
+        Button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment1 fragment1 = new Fragment1();
+                FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout, fragment1);
+                transaction.commit();
+            }
+        });
+
+
+
 
     }
 }
